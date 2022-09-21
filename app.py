@@ -22,7 +22,7 @@ class User(db.Model):
     email = db.Column(db.String(80),unique = True,nullable = False)
     
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<User>' + self.username
     
 class UserSchema(Schema):
     username = fields.String(required=True,validate=validate.Length(min=5))
