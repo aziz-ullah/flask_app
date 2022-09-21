@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>Student Record</h2>
+
+<table style="width:50%">
+
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  {% for name in users %}
+  <tr>
+    <td>{{name.username}}</td>
+    <td>{{name.email}}</td>
+    
+  </tr>
+  {%endfor%}
+</table>
+
+
+</body>
+</html>
